@@ -9,7 +9,7 @@ add it to plugins in your `~/.hyperterm.js` configuration
 ````
 module.exports = {
   ...
-  plugins: ['hyperborder']
+  plugins: ['hyperborder-animation']
   ...
 }
 ````
