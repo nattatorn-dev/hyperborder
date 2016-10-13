@@ -15,18 +15,17 @@ module.exports.decorateConfig = (config) => {
     borderWidth: '4px',
     borderColors: ['#fc1da7', '#fba506']
   }, config.hyperBorder);
-
-  var colors = getBorderColors(configObj.borderColors).join(',');
-  var borderWidth = configObj.borderWidth;
+  var { borderColors, borderWidth, deg, backgroundSize, time } = configObj;
+  var colors = getBorderColors(borderColors).join(',');
   var animateStyles = `
-    background-size: 800% 800%;
-    animation: AnimationName 16s ease infinite;
+    background-size: ${backgroundSize};
+    animation: AnimationName ${time} ease infinite;
   `
   return Object.assign({}, config, {
     css: `
       html {
         height: 100%;
-        background: linear-gradient(${ configObj.animate ? '269deg' : '180deg' }, ${colors});
+        background: linear-gradient(${ configObj.animate ? deg : '180deg' }, ${colors});
         ${ configObj.animate ? animateStyles : '' }
         border-radius: ${borderWidth};
       }
@@ -47,7 +46,6 @@ module.exports.decorateConfig = (config) => {
       #mount {
       }
       .hyperterm_main {
-        background-color: ${config.backgroundColor || '#000'};
         top: ${borderWidth};
         bottom: ${borderWidth};
         left: ${borderWidth};

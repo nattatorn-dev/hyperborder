@@ -1,7 +1,7 @@
 # hyperborder - extension for HyperTerm
 adds a gradient border to the hyperterm editor
 
-![](https://cldup.com/pL94ODfQNP.png)
+![](http://i.giphy.com/3o6Zt193fnu5j0Coow.gif)
 
 ## Installation
 add it to plugins in your `~/.hyperterm.js` configuration
@@ -26,7 +26,7 @@ module.exports = {
   config: {
     ...
       hyperBorder: {
-        borderColors: ['#fc1da7', '#fba506'],
+        borderColors: ['#ff2400', '#e81d1d', '#e8b71d',' #e3e81d', '#1de840', '#1ddde8', '#2b1de8', '#dd00f3', '#dd00f3'],
         borderWidth: '8px'
       }
     ...
@@ -62,6 +62,28 @@ module.exports = {
     ...
     hyperBorder: {
       animate: true,
+      deg: '124deg',
+      backgroundSize: '800% 1800%',
+      time: '8s'
+      ...
+    }
+    ...
+  }
+}
+```
+
+### Example
+```javascript
+module.exports = {
+  config: {
+    ...
+    hyperBorder: {
+      borderColors: [`#ff2400`, `#e81d1d`, `#e8b71d`,` #e3e81d`, `#1de840`, `#1ddde8`, `#2b1de8`, `#dd00f3`, `#dd00f3`],
+      borderWidth: '3px',
+      animate: true,
+      deg: '124deg',
+      backgroundSize: '800% 1800%',
+      time: '8s',
       ...
     }
     ...
@@ -71,3 +93,6 @@ module.exports = {
 
 ## download HyperTerm here
 https://hyperterm.org/
+
+## using
+https://github.com/webmatze/hyperborder
